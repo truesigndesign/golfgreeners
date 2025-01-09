@@ -1,18 +1,15 @@
 [
+  { "key": "Home", "url": "/" },
+  { "key": "About", "url": "/about/" },
   {
-    "key": "Home",
-    "url": "/"
+      "key": "Services",
+      "url": "/services/",
+      "children": [
+          { "key": "Coaching", "url": "/services/coaching/" },
+          { "key": "Family Play", "url": "/services/family-play/" },
+          { "key": "Equipment", "url": "/services/equipment/" }
+      ]
   },
-  {
-    "key": "About Us",
-    "url": "/about/"
-  },
-  {
-    "key": "Projects",
-    "url": "/projects/"
-  },
-  {
-    "key": "Reviews",
-    "url": "/reviews/"
-  }
+  { "key": "Reviews", "url": "/reviews/" },
+  { "key": "Contact", "url": "/contact/" }
 ]

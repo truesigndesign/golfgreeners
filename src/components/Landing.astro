@@ -10,17 +10,17 @@ const { title, image } = Astro.props
 
 <!-- standard <picture> attributes are supported. Set loading to lazy for assets below the fold -->
  <!-- Note: because we use the getImage function to generate an optimized image, we need to use special properties. More info on [the getImage() page](https://docs.astro.build/en/guides/images/#generating-images-with-getimage) -->
-<Picture 
-    src={image.src}
-    width={image.attributes.width}
-    height={image.attributes.height}
-    formats={['avif', 'webp']} 
-    alt="A description of my image."
-    aria-hidden="true" 
-    decoding="async"
-    alt="kitchen cabinets"
-    loading="eager"
+ <Picture 
+ src="https://images.unsplash.com/photo-1699564241478-8bcf8f274c1c?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+ width="2940"
+ height="1960"
+ formats={['avif', 'webp']} 
+ alt="Modern kitchen with white cabinets and elegant design"
+ aria-hidden="true" 
+ decoding="async"
+ loading="eager"
 />
+
 
 </section>
 

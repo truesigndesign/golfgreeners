@@ -1,0 +1,307 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import client from "../../data/client.json";
+import Landing from "../../components/Landing.astro";
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import {getOptimizedImage} from "../../js/utils"
+import landingImage from "../../assets/images/cabinets2.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+const optimizedImage = await getOptimizedImage(landingImage)
+---
+
+<BaseLayout
+  title="Coaching"
+  description="Meta description for the page"
+  preloadedImage = {optimizedImage}
+>
+  <!-- ============================================ -->
+  <!--                    LANDING                   -->
+  <!-- ============================================ -->
+
+  <Landing 
+    title="Coaching"
+    image={optimizedImage}
+  />
+
+
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbs-r-870">
+  <div class="cs-container">
+    <!-- Image Wrapper for Stacking -->
+    <div class="cs-images-wrapper">
+      <!-- First Image -->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="golf coaching"
+          width="630"
+          height="775"
+        >
+      </picture>
+
+      <!-- Second Image -->
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1633597468456-d11ea13ede88?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="golf coaching"
+          width="630"
+          height="775"
+        >
+      </picture>
+
+       <!-- Second Image -->
+       <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1633597470203-77c0986ecc4d?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://images.unsplash.com/photo-1633597469916-b34993ffa004?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="golf coaching"
+          width="630"
+          height="775"
+        >
+      </picture>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="cs-content">
+      <span class="cs-topper">Featured Service</span>
+      <h2 class="cs-title">Golf Coaching & Training</h2>
+      <p class="cs-text">
+        Elevate your game with professional golf coaching and training in London. Whether you're a beginner taking your first swing, an intermediate golfer seeking consistency, or an experienced player refining your skills, our tailored lessons cater to all levels. With a focus on individualized instruction and innovative tools, we’re here to help you achieve your golfing goals.
+      </p>
+      <h3>Why Choose Our Golf Coaching?</h3>
+      <ul>
+        <li><strong>Expert PGA-Certified Coaches:</strong> Our coaching team consists of PGA-certified professionals who tailor their approach to meet your unique needs, helping you build confidence and improve your technique.</li>
+        <li><strong>State-of-the-Art Training Facilities:</strong> Access cutting-edge tools such as Trackman 4 Launch Monitors and high-definition video analysis to ensure precision improvement and measurable progress.</li>
+        <li><strong>Comprehensive Curriculum:</strong> Our program covers every aspect of the game, including full swing, short game, and course management, while also focusing on fitness and mental focus for overall improvement.</li>
+      </ul>
+      <h3>Our Lesson Offerings</h3>
+      <h4>Beginner Golf Lessons</h4>
+      <p class="cs-text">
+        Building a strong foundation is the cornerstone of golfing success. Our beginner lessons are carefully designed to instill the fundamental skills that every golfer needs. You’ll learn:
+        <ul>
+          <li>Proper grip, stance, and posture for balance, control, and power.</li>
+          <li>Step-by-step guidance on consistent and efficient swing mechanics.</li>
+          <li>Understanding golf equipment and how to choose the right club for each shot.</li>
+          <li>Building confidence in a supportive and friendly environment.</li>
+        </ul>
+      </p>
+      <h4>Intermediate and Advanced Coaching</h4>
+      <p class="cs-text">
+        Once you’ve mastered the basics, our coaching takes your skills to the next level. These sessions include:
+        <ul>
+          <li>Enhancing accuracy and consistency with drills that refine ball striking.</li>
+          <li>Learning to shape shots with intentional fades, draws, and straight drives.</li>
+          <li>Developing course strategy, identifying risks, and playing smarter.</li>
+          <li>Exploring advanced equipment adjustments to optimize performance.</li>
+          <li>Building mental toughness for competitive and challenging scenarios.</li>
+        </ul>
+      </p>
+      <h4>Short Game and Putting Clinics</h4>
+      <p class="cs-text">
+        The short game is where scores are made or lost. Our specialized clinics focus on refining your skills for the most crucial part of golf. Highlights include:
+        <ul>
+          <li>Mastering chipping and pitching with precise control of trajectory and spin.</li>
+          <li>Perfecting bunker play techniques for high or low shots out of sand traps.</li>
+          <li>Improving putting skills, including green reading, speed control, and alignment.</li>
+          <li>Utilizing high-tech tools like putting simulators for detailed analysis.</li>
+        </ul>
+      </p>
+      <h4>On-Course Training</h4>
+      <p class="cs-text">
+        Practical experience on the course is essential for translating skills into real-world performance. Our on-course training offers:
+        <ul>
+          <li>Comprehensive course management, including analyzing hazards and planning each hole.</li>
+          <li>Real-world practice in different lies, slopes, and environmental conditions.</li>
+          <li>Green reading techniques to improve putting accuracy during play.</li>
+          <li>Learning and applying golf rules and etiquette for confident and respectful play.</li>
+          <li>Tracking progress with performance analytics and feedback from coaches.</li>
+        </ul>
+      </p>
+      <p class="cs-text">
+        We offer flexible options, including private lessons, group sessions, and junior programs, at convenient locations across London. Personalized progression plans ensure that your training aligns with your goals, skill level, and availability.
+      </p>
+      <p class="cs-text">
+        Golf is a lifelong sport, and improving your game is a rewarding journey. Start today and experience the benefits of professional instruction. Whether you're perfecting your swing or lowering your handicap, our coaching programs deliver results.
+      </p>
+      <a href="/services/family-play" class="cs-button-solid">Solo & Family</a>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-r-870 {
+        padding: var(--sectionPadding);
+    }
+    #sbs-r-870 .cs-container {
+        width: 100%;
+        max-width: 34.375rem; /* 550px */
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 7vw, 4rem);
+    }
+    #sbs-r-870 .cs-picture {
+        width: 100%;
+        max-width: 39.375rem; /* 630px */
+        height: auto; /* Maintain aspect ratio */
+        box-shadow: 0px 2.8px 42px rgba(0, 0, 0, 0.16);
+        border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
+        overflow: hidden;
+        align-self: flex-start; /* Ensure the image stays at the top */
+        margin-bottom: 1.5rem; /* Add spacing below the image */
+    }
+    #sbs-r-870 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #sbs-r-870 .cs-content {
+        text-align: left;
+        max-width: 33.875rem; /* 542px */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem; /* Add spacing between elements */
+        padding: 1.5rem; /* Add padding inside the content area */
+    }
+    #sbs-r-870 .cs-content h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem; /* Space below headings */
+    }
+    #sbs-r-870 .cs-content h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+    }
+    #sbs-r-870 .cs-content p {
+        line-height: 1.8; /* Improve readability */
+        margin-bottom: 1rem; /* Space between paragraphs */
+    }
+    #sbs-r-870 .cs-content ul {
+        list-style-type: disc; /* Add bullet points */
+        padding-left: 1.5rem; /* Indent list items */
+        margin-bottom: 1.5rem; /* Space below the list */
+    }
+    #sbs-r-870 .cs-content ul li {
+        margin-bottom: 0.75rem; /* Space between list items */
+    }
+    #sbs-r-870 .cs-button-solid {
+        font-size: 1rem;
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 2rem; /* Add spacing above the button */
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    #sbs-r-870 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #sbs-r-870 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-r-870 {
+        padding: var(--sectionPadding);
+    }
+
+    #sbs-r-870 .cs-container {
+        flex-direction: row; /* Preserve side-by-side layout for content */
+        max-width: 80rem; /* 1280px */
+        justify-content: space-between;
+        align-items: flex-start; /* Align everything to the top */
+    }
+
+    #sbs-r-870 .cs-images-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        width: 47%; /* Ensure images wrapper occupies the same space as before */
+        gap: 5.6rem; /* Maintain spacing between stacked images */
+        align-self: flex-start; /* Ensure the images wrapper starts at the top */
+    }
+
+    #sbs-r-870 .cs-content {
+        width: 53%; /* Retain content width */
+        padding: 0;
+        order: 1; /* Move content to the right */
+    }
+
+    #sbs-r-870 .cs-picture {
+        width: 100%; /* Ensure images fill the wrapper */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #sbs-r-870 .cs-picture img {
+        display: block; /* Prevent inline spacing issues */
+        width: 100%; /* Ensure image takes full width of its container */
+        height: auto; /* Maintain natural aspect ratio */
+        object-fit: cover; /* Ensure content fits within the container */
+    }
+}
+
+
+
+</style>
+
+
+
+  
+
