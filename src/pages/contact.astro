@@ -34,9 +34,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
           <span class="cs-topper">Contact</span>
           <h2 class="cs-title">Get in Touch</h2>
           <p class="cs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
-            ultrices odio pulvinar. Sed ut.
+            Contact us to book your course today or learn more about our services.
           </p>
         </div>
         <label>
@@ -409,38 +407,5 @@ const optimizedImage = await getOptimizedImage(landingImage)
     }
   }
 
-  /* Dark Mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #cs-contact {
-        .cs-text,
-        .cs-title {
-          color: var(--bodyTextColorWhite);
-        }
 
-        #cs-form {
-          label,
-          input,
-          textarea {
-            color: var(--bodyTextColorWhite);
-            background-color: transparent;
-
-            &::placeholder {
-              /* lighten up the color of the text by 40%*/
-              filter: brightness(1.4);
-            }
-          }
-        }
-
-        .cs-bg-picture {
-          background-color: #000;
-
-          img {
-            /* lets parent background-color bleed through and darken it */
-            opacity: 0.5;
-          }
-        }
-      }
-    }
-  }
 </style>
