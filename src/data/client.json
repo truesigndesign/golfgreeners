@@ -1,14 +1,14 @@
 {
 	"name": "Golf Greeners Golf Course",
-	"email": "help@codestitch.app",
+	"email": "contact@golfgreeners.com",
 	"phoneForTel": "555-779-4407",
 	"phoneFormatted": "(555) 779-4407",
 	"address": {
 		"lineOne": "First Address Line",
 		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
+		"city": "Wendover",
+		"state": "",
+		"zip": "",
 		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
 	},
 	"domain": "www.golfgreeners.com"
